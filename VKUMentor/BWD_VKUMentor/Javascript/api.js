@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
       html += `                 <div class="card">
-                                    <img src="assets/img/${item.HinhAnh}" alt="Delicious Food">
+                                    <img src="/assets/img/${item.HinhAnh}" alt="Delicious Food">
                                     <div class="card-content">
                                         <h2>${item.TieuDe}</h2>
                                         <p>${item.NoiDung}</p>
@@ -112,7 +112,7 @@ class NguoiDungapi {
 //   //       console.log(res.data); // Log response data to console
 //   //       alert("Đăng nhập thành công!");
 //   //       // Redirect to index.html upon successful login
-//   //       window.location.replace("./index.html");
+//   //       window.location.replace("/");
 //   //     } else {
 //   //       alert("Đăng nhập thất bại!");
 //   //     }
@@ -126,85 +126,6 @@ class NguoiDungapi {
 //   //     loginButton.disabled = false;
 //   //   });
 // });
-//Login and Sign up
-// login.js
-
-// document.querySelector("#btnLogin").addEventListener("click", function (e) {
-//   e.preventDefault();
-
-//   const login = document.getElementById('txtUsername').value;
-//   const password = document.getElementById('txtPassword').value;
-//   const errorField = document.getElementById('loginError');
-
-//   // Reset error field
-//   errorField.style.display = 'none';
-//   errorField.innerHTML = '';
-
-//   if (!login || !password) {
-//     errorField.innerHTML = '<div class="error-message">Please fill in all fields.</div>';
-//     errorField.style.display = 'block';
-//     return;
-//   }
-
-//   axios.post('http://localhost:8000/api/auth/login', {
-//       Login: login,
-//       MatKhau: password
-//   })
-//   .then((response) => {
-//       localStorage.setItem('token', response.data.token); // Lưu token vào localStorage
-//       localStorage.setItem('user', JSON.stringify(response.data.user)); // Lưu thông tin user vào localStorage
-//       window.location.href = './../../index.html'; // Chuyển hướng sau khi đăng nhập thành công
-//   })
-//   .catch((error) => {
-//       console.error('Login failed:', error.response.data); // Xử lý lỗi khi đăng nhập thất bại
-//       errorField.innerHTML = '<div class="error-message">Login failed. Please check your credentials.</div>';
-//       errorField.style.display = 'block';
-//   });
-// });
-
-
-
-// // Tương tự cho phần đăng ký
-// document.querySelector("#btnRegister").addEventListener("click", function (e) {
-//   e.preventDefault();
-
-//   const login = document.getElementById('txtUsername').value;
-//   const password = document.getElementById('txtPassword').value;
-//   const confirmPassword = document.getElementById('txtConfirmPassword').value;
-//   const errorField = document.getElementById('registerError');
-
-//   // Reset error field
-//   errorField.style.display = 'none';
-//   errorField.innerHTML = '';
-
-//   if (!login || !password || !confirmPassword) {
-//     errorField.innerHTML = '<div class="error-message">Please fill in all fields.</div>';
-//     errorField.style.display = 'block';
-//     return;
-//   }
-
-//   if (password !== confirmPassword) {
-//     errorField.innerHTML = '<div class="error-message">Passwords do not match.</div>';
-//     errorField.style.display = 'block';
-//     return;
-//   }
-
-//   axios.post('http://localhost:8000/api/auth/register', {
-//       Login: login,
-//       MatKhau: password
-//   })
-//   .then((response) => {
-//       alert('Registration successful!');
-//       window.location.href = './login.html'; // Chuyển hướng sau khi đăng ký thành công
-//   })
-//   .catch((error) => {
-//       console.error('Registration failed:', error.response.data); // Xử lý lỗi khi đăng ký thất bại
-//       errorField.innerHTML = '<div class="error-message">Registration failed. Please check your input.</div>';
-//       errorField.style.display = 'block';
-//   });
-// });
-
-
 
 
 
@@ -233,7 +154,7 @@ for (let item of data) {
 
   html += `
     <section>
-      <img src="./assets/img/HDN.png" alt="Person Pointing" />
+      <img src="/assets/img/HDN.png" alt="Person Pointing" />
       <div class="box">
         <h1>Huỳnh Đức Nhật</h1>
         <p>Sinh viên khóa 23, 23IT2</p>
